@@ -23,14 +23,14 @@ export default function Input({
           id={label}
           type={type}
           placeholder={placeholder}
-          className="border-2 border-black border-solid rounded-3xl p-3 shadow-gray shadow-2xl bg-[#292738] w-full"
+          className="border-2 border-black border-solid rounded-3xl p-3 shadow-gray shadow-2xl bg-white w-full"
           onChange={onChange}
         />
       ) : (
         <textarea
           id={label}
           placeholder={placeholder}
-          className="border-2 border-black border-solid rounded-3xl p-3 shadow-gray shadow-2xl bg-[#292738] resize-none"
+          className="border-2 border-black border-solid rounded-3xl p-3 shadow-gray shadow-2xl bg-white resize-none"
           rows={5}
           cols={50}
           onChange={onChange}
