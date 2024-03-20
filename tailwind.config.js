@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: "#000A1F",
         blue: "#007BFF",
         green: "#44D62C",
         orange: "#FF851B",
@@ -15,7 +16,16 @@ export default {
         manrope: ["Manrope", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            p: {
+              textIndent: "1.5em",
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

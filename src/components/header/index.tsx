@@ -3,14 +3,12 @@ import Nav from "../nav";
 
 export default function Header() {
   return (
-    <header className="flex items-end justify-center h-full w-full">
-      <div className="flex flex-col items-center justify-center h-full w-1/5">
-        <img className="w-32" src={logo} alt="Logo" />
-        <h1 className="text-6xl font-madimi">SL Digital</h1>
+    <header className="flex items-center justify-center h-full w-full p-10 bg-[#000C2F]">
+      <div className="flex flex-col items-center justify-center h-full w-1/5 text-white">
+        <img className="w-24" src={logo} alt="Logo" />
+        <h1 className="text-4xl font-madimi">SL Digital</h1>
       </div>
-      <div className="flex flex-col items-center justify-around h-full w-4/5">
-        <Nav />
-      </div>
+      <Nav />
     </header>
   );
 }
