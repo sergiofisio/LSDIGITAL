@@ -3,6 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        md: {
+          min: "1100px",
+          max: "1440px",
+        },
+        sm: {
+          max: "1100px",
+        },
+      },
       colors: {
         background: "#000A1F",
         blue: "#007BFF",
@@ -27,5 +36,5 @@ export default {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("tailwind-scrollbar")],
 };

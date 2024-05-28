@@ -60,8 +60,8 @@ export default function Services() {
         empresarial.
       </h2>
       <div className="flex items-center justify-center gap-10 w-full">
-        <img src={grown} alt="" />
-        <div className="flex flex-col gap-10 items-center justify-center max-w-[30%]">
+        <img src={grown} alt="" className="md:w-1/4" />
+        <div className="flex flex-col gap-10 items-center justify-center max-w-[30%] md:max-w-full">
           {services.map((service, key) => (
             <Service
               key={key}

@@ -33,7 +33,7 @@ export default function Footer({
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
-    <footer className="grid grid-cols-3 py-10 h-96">
+    <footer className="grid grid-cols-3 py-10 h-96" id="contato">
       <div className="flex flex-col items-center justify-around">
         <div className="flex flex-col items-center justify-center">
           <img className="w-24" src={logo} alt="Logo" />

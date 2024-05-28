@@ -11,11 +11,11 @@ export default function Presetation() {
         style={{ backgroundImage: `url(${bg1})` }}
         className="flex items-center justify-center h-full w-full p-20 bg-center bg-no-repeat"
       >
-        <div>
-          <h2 className="text-3xl font-semibold h-full text-center">
+        <div className="">
+          <h2 className="text-3xl font-semibold h-full text-center md:text-xl sm:text-base">
             SL Digital: Conectando você ao futuro, pixel por pixel.
           </h2>
-          <p className="text-2xl">
+          <p className="text-2xl md:text-xl sm:text-base">
             Na SL Digital, somos apaixonados por conectar inovação e tecnologia
             para criar soluções digitais que impulsionam o sucesso dos nossos
             clientes. Com uma equipe de especialistas dedicados, transformamos
@@ -23,7 +23,7 @@ export default function Presetation() {
             mundo digital.
           </p>
         </div>
-        <img src={presentation} alt="" />
+        <img className="md:w-1/2" src={presentation} alt="" />
       </div>
     </section>
   );

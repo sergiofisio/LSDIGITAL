@@ -4,8 +4,10 @@ import Input from "../input";
 
 export default function Contact({
   setModal,
+  windowHeight,
 }: {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  windowHeight: number;
 }) {
   const [form, setForm] = useState({
     name: "",
@@ -15,10 +17,18 @@ export default function Contact({
     subject: "",
     message: "",
   });
+
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-gray bg-opacity-50 flex items-center justify-center text-background">
-      <button>Limpar</button>
-      <div className="flex flex-col items-center justify-evenly w-1/2 h-fit relative bg-white rounded-2xl p-4">
+    <div
+      className={`fixed top-0 right-0 flex w-full h-full bg-opacity-50 bg-red z-50 ${
+        windowHeight < 900
+          ? "overflow-y-auto scrollbar scrollbar-thumb-red scrollbar-track-white justify-center"
+          : "justify-center items-center"
+      } `}
+    >
+      <div
+        className={`flex flex-col w-3/5 p-5 bg-white rounded-3xl relative drop-shadow-[0_0_20px_#fff] gap-4 h-fit md:min-h-[100%] md:w-full sm:w-full sm:min-h-[50%]`}
+      >
         <h2
           onClick={() => setModal(false)}
           className="flex items-center justify-center cursor-pointer absolute top-3 right-4 border-solid border-background border-2 rounded-[100%] w-10 h-10 text-background text-2xl font-bold"

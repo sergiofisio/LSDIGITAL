@@ -30,22 +30,26 @@ const businessInfo = [
 
 export default function Business() {
   return (
-    <section className="flex items-center justify-center gap-10 px-80">
-      <img src={business} alt="business" />
-      <div className=" flex flex-col gap-10">
-        <h2 className="text-center text-3xl">
-          Explore Nossas Soluções Profissionais de Negócios
-        </h2>
-        <div className="grid grid-cols-2 gap-10">
-          {businessInfo.map((info, key) => (
-            <div className="flex gap-4" key={key}>
-              <img src={info.img} alt="business" />
-              <div>
-                <h3 className="text-xl font-bold">{info.title}</h3>
-                <p className="text-base font-extralight">{info.description}</p>
+    <section className="flex flex-col items-center justify-center gap-10 px-8">
+      <h2 className="text-center text-3xl">
+        Explore Nossas Soluções Profissionais de Negócios
+      </h2>
+      <div className="flex items-center justify-center gap-10 w-full">
+        <img src={business} alt="business" className="md:w-1/3" />
+        <div className=" flex flex-col gap-10">
+          <div className="grid grid-cols-2 gap-10">
+            {businessInfo.map((info, key) => (
+              <div className="flex gap-4" key={key}>
+                <img src={info.img} alt="business" className="md:w-1/3" />
+                <div>
+                  <h3 className="text-xl font-bold">{info.title}</h3>
+                  <p className="text-base font-extralight">
+                    {info.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
